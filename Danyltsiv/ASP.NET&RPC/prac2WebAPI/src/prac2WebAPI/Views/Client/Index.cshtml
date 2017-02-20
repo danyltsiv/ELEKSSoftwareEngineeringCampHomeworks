@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Web API Practice</title>
+<style>
+    #editByIdForm input{
+        margin:3px;
+    }
+</style>
+</head>
+<body>
+    <p>Get All Workers:</p>
+    <form action="workers" method="get" enctype="application/x-www-form-urlencoded">
+        <input type="submit" value="Get All" />
+    </form>
+
+    <p>Get worker by ID: </p>
+    <form id="getByIdForm" action="workers" method="get" onsubmit="getId()" enctype="application/x-www-form-urlencoded">
+        <input type="text" />
+        <input type="submit" value="Get Worker" />
+    </form>
+    <p>Editing worker by ID:</p>
+    <form id="editByIdForm" action="workers" method="post" enctype="application/x-www-form-urlencoded">
+        <input type="text" name="WorkerId" placeholder="ID"/><br>
+        <input type="text" name="Surname" placeholder="Surname"/><br>
+        <input type="text" name="Name" placeholder="Name"/><br>
+        <input type="text" name="AddressId" placeholder="ID of Address"/><br>
+        <input type="text" name="PhoneNumber" placeholder="Phone Number"/><br>
+        <input type="text" name="Position" placeholder="Position"/><br>
+        <input type="text" name="UnitId" placeholder="ID of Unit"/><br>
+        <input type="text" name="Head" placeholder="Head"/><br>
+        <input type="submit" value="Edit"/>
+    </form>
+    <script>
+        function getId()
+        {
+            var id = getByIdForm.children[0].value;
+            getByIdForm.action = "workers/" + id;
+        }
+    </script>
+</body>
+</html>

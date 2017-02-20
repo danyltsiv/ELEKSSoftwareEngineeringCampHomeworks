@@ -1,0 +1,27 @@
+<h3 class="text-center text-primary">Translater</h3>
+
+<div class="container-fluid well">
+    
+    <div class="panel">
+      
+        <div class="panel-body">
+            
+            <div class="row">
+                    <textarea class="col-md-6" rows="2" [(ngModel)]="queryTranslate.phrase" placeholder="Phrase here..."></textarea>
+                 
+                    <textarea class="col-md-6" rows="2" [(ngModel)]="queryTranslate.translation" placeholder="Translation here..." disabled="true"></textarea>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p>
+                        <button class="btn btn-primary btn-lg pull-right"  (click)="getTranslation()">Translate</button>
+                    </p>
+                </div>
+            </div>
+            
+        </div>    
+        
+    </div>
+    
+</div>

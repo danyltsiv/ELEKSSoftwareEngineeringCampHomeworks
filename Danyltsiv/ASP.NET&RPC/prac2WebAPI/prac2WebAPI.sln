@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CDC3F3DB-0104-45B8-A2D2-10C50D7D055B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{74C380EA-BC52-470B-83F8-76627AA0B9EE}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "prac2WebAPI", "src\prac2WebAPI\prac2WebAPI.xproj", "{B5972EC5-37B6-470F-9ADC-8399C0972C7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5972EC5-37B6-470F-9ADC-8399C0972C7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5972EC5-37B6-470F-9ADC-8399C0972C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5972EC5-37B6-470F-9ADC-8399C0972C7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5972EC5-37B6-470F-9ADC-8399C0972C7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B5972EC5-37B6-470F-9ADC-8399C0972C7D} = {CDC3F3DB-0104-45B8-A2D2-10C50D7D055B}
+	EndGlobalSection
+EndGlobal

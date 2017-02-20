@@ -1,0 +1,47 @@
+﻿syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.WaiterServiceProto";
+option java_outer_classname = "WaiterServiceProto";
+option objc_class_prefix = "HLW";
+
+package WaiterServiceProto;
+
+service WaiterService{
+	rpc checkProducts(Empty) returns (productArr) {}
+	rpc addOrder(Order) returns(Bool) {}
+	rpc closeOrder(Id) returns(Bool) {}
+	rpc cancelOrder(Id) returns(Bool) {}
+	rpc getActiveOrders(Empty) returns(orderArr) {}
+	rpc getClosedOrders(Empty) returns(orderArr) {}
+}
+
+message Empty{}
+
+message Id{
+int32 value = 1;
+}
+
+message Bool{
+bool value = 1;
+}
+
+message Product{
+int32 id = 1;
+string name = 2;
+string description = 3;
+}
+
+message Order{
+int32 id = 1;
+int32 table = 2;
+productArr products = 3;
+}
+
+message productArr{
+repeated Product values = 1;
+}
+
+message orderArr{
+repeated Order values = 1;
+}

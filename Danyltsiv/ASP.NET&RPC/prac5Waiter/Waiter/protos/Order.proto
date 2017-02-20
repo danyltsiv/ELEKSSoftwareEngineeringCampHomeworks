@@ -1,0 +1,21 @@
+﻿syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.order";
+option java_outer_classname = "OrderProto";
+option objc_class_prefix = "HLW";
+
+package order;
+
+service Waiter{
+	rpc informOrder(OrderRequest) returns (OrderReply) {}
+}
+
+message OrderRequest {
+  string order = 1;
+}
+
+// The response message containing the greetings
+message OrderReply {
+  string message = 1;
+}

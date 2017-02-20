@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetAllWorkers">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllWorkersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllWorkersResult" type="tns:ArrayOfWorker" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWorker">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Worker" nillable="true" type="tns:Worker" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Worker">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="WorkerId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Surname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="tns:Address" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Position" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UnitId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Head" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Address">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BuildingNumber" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetWorkerById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkerByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWorkerByIdResult" type="tns:Worker" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditWorkerById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="surname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="tns:Address" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="position" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="unitId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="head" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditWorkerByIdResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAllWorkersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllWorkers" />
+  </wsdl:message>
+  <wsdl:message name="GetAllWorkersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllWorkersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkerByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWorkerById" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkerByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWorkerByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditWorkerByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:EditWorkerById" />
+  </wsdl:message>
+  <wsdl:message name="EditWorkerByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:EditWorkerByIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AsmxWorkerServiceSoap">
+    <wsdl:operation name="GetAllWorkers">
+      <wsdl:input message="tns:GetAllWorkersSoapIn" />
+      <wsdl:output message="tns:GetAllWorkersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkerById">
+      <wsdl:input message="tns:GetWorkerByIdSoapIn" />
+      <wsdl:output message="tns:GetWorkerByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditWorkerById">
+      <wsdl:input message="tns:EditWorkerByIdSoapIn" />
+      <wsdl:output message="tns:EditWorkerByIdSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AsmxWorkerServiceSoap" type="tns:AsmxWorkerServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllWorkers">
+      <soap:operation soapAction="http://tempuri.org/GetAllWorkers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkerById">
+      <soap:operation soapAction="http://tempuri.org/GetWorkerById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditWorkerById">
+      <soap:operation soapAction="http://tempuri.org/EditWorkerById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AsmxWorkerServiceSoap12" type="tns:AsmxWorkerServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllWorkers">
+      <soap12:operation soapAction="http://tempuri.org/GetAllWorkers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkerById">
+      <soap12:operation soapAction="http://tempuri.org/GetWorkerById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditWorkerById">
+      <soap12:operation soapAction="http://tempuri.org/EditWorkerById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AsmxWorkerService">
+    <wsdl:port name="AsmxWorkerServiceSoap" binding="tns:AsmxWorkerServiceSoap">
+      <soap:address location="http://localhost:52845/AsmxWorkerService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AsmxWorkerServiceSoap12" binding="tns:AsmxWorkerServiceSoap12">
+      <soap12:address location="http://localhost:52845/AsmxWorkerService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

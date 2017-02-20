@@ -1,0 +1,72 @@
+﻿html,body{
+	font-family:Georgia, 'Times New Roman', Times, serif;
+	margin:0;
+}
+header{
+	background:url('../../src/header.jpg');
+	background-position:center;
+	background-size:cover;
+	height:667px;
+}
+nav{
+	height:52px;
+	border-bottom:1px solid #ffffcc;
+	padding:24px 60px 0px;
+}
+nav a{
+	color:#bfbfbf;
+	margin:20px;
+	text-decoration:none;
+}
+nav a:hover{
+	text-decoration:none;
+	color:white;
+	transition: color 0.5s;
+}
+nav ul{
+	float:right;
+	margin:0;
+}
+nav li{
+	display:inline;
+}
+.active{
+	color:#ccff66;
+}
+.active:hover{
+	color:#ccff66;
+}
+.logo{
+	font-size:20px;
+	letter-spacing:10px;
+	color:white;
+}
+header h1
+{
+	color:white;
+	font-size:90px;
+	text-align:center;
+	margin-top:175px;
+}
+header p{
+	color:white;
+	font-size:20px;
+	text-align:center;
+	margin-bottom:40px;
+}
+.myGreenButton{
+	color:white;
+	padding:16px 18px;
+	border-radius:30px;
+	text-decoration:none;
+	background:#ccff66;
+	display:inline-block;
+	font-size:17px;
+	margin:10px 0;
+}
+.myGreenButton:hover{
+	background: #00ff00;
+	color:white;
+	text-decoration:none;
+	transition:background 0.5s;
+}

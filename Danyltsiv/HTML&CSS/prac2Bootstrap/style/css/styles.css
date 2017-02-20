@@ -1,0 +1,157 @@
+﻿html,body{
+	font-family:'Open Sans','Helvetica Neue',Arial,sans-serif;
+}
+header{
+	background:url('../../src/header.jpg');
+	background-position:center;
+	background-size:cover;
+	height:667px;
+}
+.headerBot{
+		padding:175px 0;
+}
+nav{
+	height:52px;
+	border-bottom:1px solid #ffffcc;
+	padding:12px 60px;
+	position:fixed;
+	width:100%;
+}
+nav a{
+	color:#bfbfbf;
+	margin:20px;
+}
+nav a:hover{
+	text-decoration:none;
+	color:white;
+	transition: color 0.5s;
+}
+nav ul{
+	float:right;
+}
+nav span.glyphicon.glyphicon-fire{
+	color:white;
+	margin-right:20px;
+}
+.active,.active:hover{
+	color:#ccff66;
+}
+.logo{
+	font-size:20px;
+	letter-spacing:10px;
+	color:white;
+}
+header h1
+{
+	color:white;
+	font-size:90px;
+	text-align:center;
+	margin:0;
+}
+header p{
+	color:white;
+	font-size:20px;
+	text-align:center;
+	margin:20px 0;
+}
+.myGreenButton{
+	color:white;
+	padding:16px 18px;
+	border-radius:30px;
+	text-decoration:none;
+	background:#ccff66;
+	display:inline-block;
+	font-size:17px;
+	margin:10px 0;
+}
+.myGreenButton:hover{
+	background: #00ff00;
+	color:white;
+	text-decoration:none;
+	transition:background 0.5s;
+}
+.myWhiteButton{
+	color:black;
+	padding:16px 18px;
+	border-radius:30px;
+	text-decoration:none;
+	background:white;
+	display:inline-block;
+	font-size:17px;
+	margin:10px 0;
+}
+.myWhiteButton:hover{
+	text-decoration:none;
+}
+.greenSection{
+	text-align:center;
+	color:white;
+	background:#ccff66;
+	padding:65px 305px;
+}
+.greenSection p{
+	font-size:18px;
+}
+.whiteSection,.blackSection{
+	padding:100px;
+}
+.whiteSection p,.blackSection p,.section5 p{
+	font-size:22px;
+	color:#666666;
+}
+.whiteSection img,.blackSection img{
+	border-radius:50%;
+}
+.blackSection{
+	background:black;
+}
+.blackSection h2{
+	color:white;
+}
+.col-md-4{
+	padding: 0;
+}
+.buttonsSection a{
+	display:block;
+	padding: 0 0;
+	text-align:center;
+	font-size:36px;
+	color:white;
+	text-shadow: 1px 1px 2px black, 0 0 1em black;
+	padding:80px;
+}
+.buttonsSection a:hover{
+	text-decoration:none;
+	border:10px solid;
+	border-color:hsla(240, 50%, 58%, 0.5);
+	padding:70px;
+}
+.buttonsSection  .row{
+	margin:0;
+	height:200px;
+}
+.left a{
+	background:url('../../src/writing.jpg');
+}
+.center a{
+	background:url('../../src/concert.jpg');
+}
+.right a{
+	background:url('../../src/pencil_sharpener.jpg');
+}
+.buttonsSection a{
+	background-position:center;
+	background-size:cover;
+}
+.buttonsSection a:hover{
+	background-position:center;
+	background-size:120%;
+}
+.whiteSection2{
+	padding:45px 130px;
+	text-align:center;
+}
+footer .footerBot{
+	padding:50px;
+	font-size:16px;
+}

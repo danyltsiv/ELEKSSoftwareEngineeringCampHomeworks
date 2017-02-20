@@ -1,0 +1,26 @@
+<div id="translateAdd" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Add Translate</h4>
+      </div>
+      <div class="modal-body">
+        
+        <div class="container-fluid">
+          <div class="row">
+
+              <textarea class="col-md-6" rows="4" [(ngModel)]="editedTranslate.phrase" placeholder="Phrase here..."></textarea>
+              <textarea class="col-md-6" rows="4" [(ngModel)]="editedTranslate.translation" placeholder="Translation here..."></textarea>
+
+          </div>
+        </div>
+         
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="saveTranslate()" data-dismiss="modal">Add translate</button>
+      </div>
+    </div>
+  </div>
+</div>
